@@ -1,14 +1,12 @@
 #!/bin/bash
 #attendence check
-attendence=$(( RANDOM % 2 ))
+attendence=$(( RANDOM % 3 ))
 if(( attendence == 0 ))
 then
     echo "Employee is absent"
+elif(( attendence == 1))
+then
+    echo "Employee is full time present"
 else
-    echo "Employee is present"
+    echo "Employee is part time present"
 fi
-
-#calculation of daily employee wage
-wage_per_hour=20
-no_of_hours=8
-echo "The Daily Employee Wage is $(( attendence * wage_per_hour * no_of_hours ))"
